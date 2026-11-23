@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="岛城风物——基于四份青岛资料构建的景观、美食、酒店民宿与文化旅游传播创作平台。">
+  <title>岛城风物｜青岛城市营销内容工作室</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="facts.js" defer></script>
+  <script src="hotel-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳至主要内容</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand route-link" href="#home" aria-label="岛城风物首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M4 27h32M7 27c0-4 3-6 6-6s6 2 6 6M21 27c0-5 4-8 8-8s7 3 7 8"/><path d="M20 8v8M15 12l5 4 5-4"/></svg>
+      </span>
+      <span class="brand-type"><strong>岛城风物</strong><small>QINGDAO STORY STUDIO</small></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#home" class="nav-link" data-route="home"><span>01</span>首页</a>
+      <a href="#guide" class="nav-link" data-route="guide"><span>02</span>行程攻略</a>
+      <a href="#studio" class="nav-link" data-route="studio"><span>03</span>智能创作</a>
+      <a href="#library" class="nav-link" data-route="library"><span>04</span>事实库</a>
+    </nav>
+    <button class="source-status" type="button" data-go-library>
+      <span class="status-dot" aria-hidden="true"></span>
+      <span><strong id="header-fact-count">161</strong> 条事实可溯源</span>
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M9 4l4 4-4 4"/></svg>
+    </button>
+  </header>
+
+  <main id="main-content">
+    <section class="view home-view" id="home-view" data-view="home" aria-labelledby="home-title">
+      <div class="hero">
+        <div class="hero-topline">
+          <span class="hero-coordinate">36°04′N · 120°23′E</span>
+          <span class="hero-rule"></span>
+          <span>山海之间 · 一城风味</span>
+          <span class="hero-edition">QINGDAO / SHANDONG</span>
+        </div>
+
+        <div class="hero-body">
+          <div class="hero-copy">
+            <p class="hero-overline">CITY OF MOUNTAIN &amp; SEA</p>
+            <h1 id="home-title"><span>青</span><span>岛</span></h1>
+            <p class="hero-subtitle">山海之间<br>一城风味</p>
+            <div class="hero-tags" aria-label="青岛城市印象">
+              <span>红瓦</span><span>绿树</span><span>碧海</span><span>蓝天</span>
+              <button type="button" class="tag-ref" data-fact="Q104">Q104</button>
+            </div>
+            <p class="hero-intro">
+              世人初识青岛，多沉醉于红瓦绿树、碧海蓝天<button type="button" class="inline-ref" data-fact="Q104">Q104</button>。从栈桥的海风<button type="button" class="inline-ref" data-fact="Q03">Q03</button>，到一杯啤酒的泡沫<button type="button" class="inline-ref" data-fact="Q74">Q74</button>，再到193家住宿样本<button type="button" class="inline-ref" data-fact="Q66">Q66</button>里的城市温度，岛城的故事，都能找到出处。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary route-link" href="#guide">生成行程攻略<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a>
+              <a class="button button-ghost route-link" href="#studio">开始创作 <span>↗</span></a>
+              <a class="button button-ghost route-link" href="#library">查看事实库 <span>↗</span></a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="visual-frame" id="hero-image-wrap">
+              <img id="hero-image" alt="《青岛景观》文档内嵌的崂山实景照片" fetchpriority="high">
+              <div class="image-loading" id="hero-loading" role="status"><span class="tide-loader"></span>正在取景青岛</div>
+              <div class="image-error" id="hero-error" hidden>
+                <p>海雾暂时遮住了画面</p>
+                <button type="button" class="text-button" id="retry-hero">重新加载</button>
+              </div>
+              <span class="ai-label">文档原图</span>
+              <div class="visual-caption">
+                <span>红瓦 · 绿树 · 碧海 · 蓝天</span>
+                <span>青岛 · 市南海岸</span>
+              </div>
+            </div>
+            <div class="hero-stamp" aria-label="岛城风物印章装饰"><span>岛城</span><span>风物</span><i>青</i></div>
+            <p class="hero-side-text">山 海 相 拥<br>风 物 有 据</p>
+          </div>
+        </div>
+
+        <div class="hero-footer">
+          <span>基于四份青岛资料构建 · 不编造库外信息</span>
+          <div class="hero-metrics">
+            <div><strong id="metric-fact-count">161</strong><span>条事实</span></div>
+            <div><strong>5</strong><span>类主题</span></div>
+            <div><strong>4</strong><span>个平台</span></div>
+          </div>
+          <span>向下探索 ↓</span>
+        </div>
+      </div>
+
+      <section class="home-manifesto section-shell" aria-labelledby="manifesto-title">
+        <div class="section-label"><span>01</span> ABOUT THE PROJECT</div>
+        <div class="manifesto-grid">
+          <h2 id="manifesto-title">让青岛的每一次<br>表达，都有据可依</h2>
+          <div class="manifesto-text">
+            <p>景点、美食、酒店民宿与城市文化，先从四份原始资料整理成可检索、可引用的事实库；再根据小红书、抖音、微信公众号与微博的不同语境，生成各自的文案结构与配图。</p>
+            <p class="manifesto-note">不是自由发挥的文案机器，而是一条“事实 → 表达 → 画面”的内容工作流。</p>
+            <div class="manifesto-stats">
+              <div><strong>4<small>份</small></strong><span>原始文档</span></div>
+              <div><strong>193<small>家</small></strong><span>住宿样本</span></div>
+              <div><strong>100<small>%</small></strong><span>事实可回溯</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="theme-section" aria-labelledby="theme-title">
+        <div class="section-shell theme-shell">
+          <div class="theme-head">
+            <div>
+              <div class="section-label"><span>02</span> FIVE WAYS TO TELL QINGDAO</div>
+              <h2 id="theme-title">青岛，有五种讲法</h2>
+            </div>
+            <p>每一种，都对应事实库中的真实条目。</p>
+          </div>
+          <div class="theme-grid" id="home-theme-grid">
+            <button type="button" class="theme-card theme-landscape" data-theme-link="landscape">
+              <span class="theme-photo" data-theme-photo="landscape" aria-hidden="true"></span>
+              <span class="theme-index">01</span>
+              <span class="theme-en">LANDSCAPE</span>
+              <strong>山海之间</strong>
+              <small>栈桥、崂山、八大关与海岸线</small>
+              <span class="theme-count" data-count-theme="landscape">12 条</span>
+              <i>探索 →</i>
+            </button>
+            <button type="button" class="theme-card theme-food" data-theme-link="food">
+              <span class="theme-photo" data-theme-photo="food" aria-hidden="true"></span>
+              <span class="theme-index">02</span>
+              <span class="theme-en">TASTE</span>
+              <strong>青岛味道</strong>
+              <small>海鲜、锅贴、水饺与本地小吃</small>
+              <span class="theme-count" data-count-theme="food">53 条</span>
+              <i>探索 →</i>
+            </button>
+            <button type="button" class="theme-card theme-stay" data-theme-link="stay">
+              <span class="theme-photo" data-theme-photo="stay" aria-hidden="true"></span>
+              <span class="theme-index">03</span>
+              <span class="theme-en">STAY</span>
+              <strong>住进青岛</strong>
+              <small>193家住宿样本的类型与价格</small>
+              <span class="theme-count" data-count-theme="stay">8 条</span>
+              <i>探索 →</i>
+            </button>
+            <button type="button" class="theme-card theme-beer" data-theme-link="beer">
+              <span class="theme-photo" data-theme-photo="beer" aria-hidden="true"></span>
+              <span class="theme-index">04</span>
+              <span class="theme-en">BEER</span>
+              <strong>啤酒之城</strong>
+              <small>从1903到城市文化符号</small>
+              <span class="theme-count" data-count-theme="beer">30 条</span>
+              <i>探索 →</i>
+            </button>
+            <button type="button" class="theme-card theme-culture" data-theme-link="culture">
+              <span class="theme-photo" data-theme-photo="culture" aria-hidden="true"></span>
+              <span class="theme-index">05</span>
+              <span class="theme-en">CULTURE</span>
+              <strong>城市文脉</strong>
+              <small>文明根脉、城市风貌与风物</small>
+              <span class="theme-count" data-count-theme="culture">52 条</span>
+              <i>探索 →</i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow-section section-shell" aria-labelledby="workflow-title">
+        <div class="section-label"><span>03</span> HOW IT WORKS</div>
+        <div class="workflow-head">
+          <h2 id="workflow-title">三步，完成一次城市表达</h2>
+          <a href="#studio" class="text-link route-link">进入创作台 <span>→</span></a>
+        </div>
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <span class="wf-no">STEP 01</span>
+            <div class="wf-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M6 12h36M6 24h36M6 36h36"/><path d="M16 8v32M32 8v32"/></svg></div>
+            <h3>选定事实主题</h3>
+            <p>从景观、美食、住宿、啤酒与城市文化中选取一个角度，全部内容来自原始文档。</p>
+          </article>
+          <article class="workflow-card">
+            <span class="wf-no">STEP 02</span>
+            <div class="wf-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 36V18l8-6 8 6v18M24 36V14l8-6 8 6v22"/><path d="M4 40h40"/></svg></div>
+            <h3>生成平台文案</h3>
+            <p>小红书重体验、抖音重节奏、公众号重叙事、微博重话题，一稿多态。</p>
+          </article>
+          <article class="workflow-card">
+            <span class="wf-no">STEP 03</span>
+            <div class="wf-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="7" y="9" width="34" height="26" rx="2"/><path d="M7 30l10-8 8 6 6-5 10 7M17 17h.1"/></svg></div>
+            <h3>配图与导出</h3>
+            <p>按平台画幅调用文档内嵌实景图，文案连同事实来源一键复制或导出。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="platform-section section-shell" aria-labelledby="platform-title">
+        <div class="section-label"><span>04</span> PLATFORM MATRIX</div>
+        <div class="platform-head">
+          <h2 id="platform-title">同一个青岛，不同的说法</h2>
+          <p>平台不只是尺寸差异，更是语气、结构与阅读节奏的差异。</p>
+        </div>
+        <div class="platform-strip">
+          <div class="platform-item"><span class="p-mark">红</span><strong>小红书</strong><small>3:4 · 生活方式笔记</small></div>
+          <div class="platform-item"><span class="p-mark">音</span><strong>抖音</strong><small>9:16 · 15秒分镜</small></div>
+          <div class="platform-item"><span class="p-mark">文</span><strong>微信公众号</strong><small>16:9 · 深度图文</small></div>
+          <div class="platform-item"><span class="p-mark">博</span><strong>微博</strong><small>1:1 · 话题短文案</small></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="view guide-view" id="guide-view" data-view="guide" aria-labelledby="guide-title" hidden>
+      <div class="page-heading section-shell">
+        <div>
+          <div class="section-label"><span>02</span> ITINERARY BUILDER</div>
+          <h1 id="guide-title">先选人群，再排一份能走的攻略</h1>
+          <p>地点、时段依据、住宿与餐饮、费用全部取自四份文档；文档没写的部分会明确标注“未标注”。</p>
+        </div>
+        <div class="prototype-badge"><span></span>文档约束行程 · 费用可核对</div>
+      </div>
+
+      <div class="guide-layout section-shell">
+        <aside class="guide-panel" aria-label="攻略筛选">
+          <div class="panel-heading"><span>筛选条件</span><small>FILTER / 01</small></div>
+          <p class="control-label"><span>01</span> 你更像哪类游客</p>
+          <div class="persona-options" id="persona-options">
+            <button type="button" data-persona="play" aria-pressed="true"><strong>爱玩 · 体验派</strong><small>海水浴场、海岛、公园与夜景</small><i></i></button>
+            <button type="button" data-persona="sight" aria-pressed="false"><strong>爱景点 · 打卡派</strong><small>地标、万国建筑与名山</small><i></i></button>
+          </div>
+          <p class="control-label"><span>02</span> 行程天数</p>
+          <div class="segmented" id="day-options">
+            <button type="button" data-days="1" aria-pressed="true">1 天</button>
+            <button type="button" data-days="2" aria-pressed="false">2 天</button>
+            <button type="button" data-days="3" aria-pressed="false">3 天</button>
+          </div>
+          <p class="control-label"><span>03</span> 住宿预算档</p>
+          <div class="segmented" id="budget-options">
+            <button type="button" data-budget="economy" aria-pressed="false">经济</button>
+            <button type="button" data-budget="comfort" aria-pressed="true">舒适</button>
+            <button type="button" data-budget="quality" aria-pressed="false">品质</button>
+          </div>
+          <button type="button" class="button button-primary guide-generate" id="guide-generate">生成攻略<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></button>
+          <p class="guide-note">费用只统计文档写明的数字：住宿按文档表 4 推荐酒店的起步价计算，门票逐项标注，餐饮文档未提供人均价格。「建议时段」为行程安排，开放时间以文档标注为准。</p>
+        </aside>
+        <div class="guide-output" id="guide-output" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="view studio-view" id="studio-view" data-view="studio" aria-labelledby="studio-title" hidden>
+      <div class="page-heading section-shell">
+        <div>
+          <div class="section-label"><span>03</span> CONTENT STUDIO</div>
+          <h1 id="studio-title">一座青岛，四种表达</h1>
+          <p>选择平台与事实主题，生成可核对、可导出的传播方案。</p>
+        </div>
+        <div class="prototype-badge"><span></span>事实约束生成 · 本地交互原型</div>
+      </div>
+
+      <div class="studio-layout section-shell">
+        <aside class="control-panel" aria-label="创作设置">
+          <div class="panel-heading"><span>创作设置</span><small>CREATE / 01</small></div>
+          <fieldset class="control-group">
+            <legend><span>01</span> 传播平台</legend>
+            <div class="platform-options" id="platform-options">
+              <button type="button" data-platform="xiaohongshu" aria-pressed="true"><strong>小红书</strong><small>种草笔记 · 3:4</small><i></i></button>
+              <button type="button" data-platform="douyin" aria-pressed="false"><strong>抖音</strong><small>短视频 · 9:16</small><i></i></button>
+              <button type="button" data-platform="wechat" aria-pressed="false"><strong>微信公众号</strong><small>深度图文 · 16:9</small><i></i></button>
+              <button type="button" data-platform="weibo" aria-pressed="false"><strong>微博</strong><small>话题短文案 · 1:1</small><i></i></button>
+            </div>
+          </fieldset>
+          <fieldset class="control-group">
+            <legend><span>02</span> 事实主题</legend>
+            <div class="theme-options" id="theme-options">
+              <button type="button" data-theme="landscape" aria-pressed="true">山海之间</button>
+              <button type="button" data-theme="food" aria-pressed="false">青岛味道</button>
+              <button type="button" data-theme="stay" aria-pressed="false">住进青岛</button>
+              <button type="button" data-theme="beer" aria-pressed="false">啤酒之城</button>
+              <button type="button" data-theme="culture" aria-pressed="false">城市文脉</button>
+            </div>
+            <p class="control-description" id="theme-description"></p>
+          </fieldset>
+          <fieldset class="control-group">
+            <legend><span>03</span> 表达风格</legend>
+            <div class="tone-options" id="tone-options">
+              <button type="button" data-tone="warm" aria-pressed="true">温暖叙事</button>
+              <button type="button" data-tone="knowledge" aria-pressed="false">知识科普</button>
+              <button type="button" data-tone="concise" aria-pressed="false">简洁有力</button>
+            </div>
+          </fieldset>
+          <div class="control-group">
+            <label class="select-label" for="visual-style"><span>04</span> 配图构图</label>
+            <div class="select-wrap">
+              <select id="visual-style">
+                <option value="editorial">海岸纪实 · 整体场景</option>
+                <option value="macro">细节特写 · 质感优先</option>
+                <option value="overhead">俯瞰秩序 · 几何构图</option>
+              </select>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+            </div>
+          </div>
+          <button type="button" class="generate-button" id="generate-button">
+            <span class="generate-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg></span>
+            <span><strong>换一版传播方案</strong><small>事实不变，表达焕新</small></span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg>
+          </button>
+          <p class="fact-guarantee"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2 16 4v5c0 4-2.5 7-6 9-3.5-2-6-5-6-9V4l6-2Z"/><path d="m7 10 2 2 4-4"/></svg>仅调用已入库事实，不补充库外资料</p>
+        </aside>
+
+        <div class="output-workspace">
+          <div class="output-toolbar">
+            <div class="output-identity"><span id="output-platform-mark">红</span><div><strong id="output-platform-name">小红书传播方案</strong><small id="output-theme-name">主题：山海之间</small></div></div>
+            <div class="validation-badge" id="validation-badge"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 8 3 3 7-7"/></svg>事实校验通过</div>
+          </div>
+
+          <div class="output-grid" id="output-grid">
+            <article class="copy-panel" aria-labelledby="copy-panel-title">
+              <div class="content-topline"><span id="copy-panel-title">生成文案</span><small id="content-variant">VERSION 01</small></div>
+              <div id="generated-content" class="generated-content" aria-live="polite"></div>
+              <div class="content-actions">
+                <button type="button" class="button button-primary" id="copy-content"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="6" y="6" width="10" height="11" rx="1"/><path d="M13 6V3H3v11h3"/></svg>复制完整文案</button>
+                <button type="button" class="button button-secondary" id="download-content"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m-4-4 4 4 4-4M3 16h14"/></svg>导出 TXT</button>
+              </div>
+            </article>
+
+            <aside class="visual-panel" aria-labelledby="visual-panel-title">
+              <div class="content-topline"><span id="visual-panel-title">平台配图</span><small id="image-ratio">3:4 竖版</small></div>
+              <div class="generated-image-frame ratio-portrait" id="generated-image-frame">
+                <img id="generated-image" alt="文档内嵌的青岛实景配图">
+                <div class="image-loading" id="image-loading" role="status"><span class="tide-loader"></span>正在读取文档配图</div>
+                <div class="image-error" id="image-error" hidden><p>配图暂时未能载入</p><button type="button" class="text-button" id="retry-image">重新加载</button></div>
+                <span class="ai-label" id="visual-source-label">文档原图</span>
+                <span class="visual-theme-label" id="visual-theme-label">山海之间</span>
+                <div class="text-cover" id="text-cover" hidden><small>DOCUMENT TEXT ONLY</small><strong id="text-cover-title">住进青岛</strong><span>该主题文档未提供图片，仅使用文字信息</span></div>
+              </div>
+              <div class="visual-meta"><span id="visual-platform-label">小红书 · 生活方式构图</span><a id="open-image" href="#" target="_blank" rel="noopener">打开原图 ↗</a></div>
+              <details class="prompt-details">
+                <summary>查看配图来源说明 <span>+</span></summary>
+                <p id="image-prompt"></p>
+                <button type="button" class="text-button" id="copy-prompt">复制说明</button>
+              </details>
+            </aside>
+          </div>
+
+          <section class="source-panel" aria-labelledby="source-panel-title">
+            <div class="source-panel-heading">
+              <div><span class="source-check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3 8 3 3 7-7"/></svg></span><strong id="source-panel-title">本版事实来源</strong></div>
+              <span id="source-summary">0 处引用 · 0 项事实</span>
+            </div>
+            <div class="used-facts" id="used-facts"></div>
+            <p class="source-note">点击编号可查看原始文档段落；复制与导出均自动附来源。</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="view library-view" id="library-view" data-view="library" aria-labelledby="library-title" hidden>
+      <div class="page-heading section-shell library-heading">
+        <div>
+          <div class="section-label"><span>04</span> VERIFIED FACT LIBRARY</div>
+          <h1 id="library-title">每一句，都有来处</h1>
+          <p>平台只从这里取用青岛事实。检索、核对，再创作。</p>
+        </div>
+        <div class="source-document-card">
+          <div class="doc-stack" aria-hidden="true"><span></span><span></span><span></span><span>4</span></div>
+          <div><strong>四份青岛资料</strong><span>景观 · 美食 · 酒店民宿 · 文化</span></div>
+          <span class="doc-status">已整理</span>
+        </div>
+      </div>
+
+      <div class="library-shell section-shell">
+        <div class="library-summary">
+          <div><strong id="library-total">155</strong><span>条事实</span></div>
+          <div><strong>5</strong><span>个内容分类</span></div>
+          <div><strong>193</strong><span>家住宿样本</span></div>
+          <p>资料边界：未引入四份文档之外的景点、商家、价格或人物信息。</p>
+        </div>
+        <div class="library-tools">
+          <label class="search-box" for="fact-search">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg>
+            <input type="search" id="fact-search" placeholder="搜索事实、地点或关键词，如“崂山”“锅贴”“1903”" autocomplete="off">
+            <kbd>⌘ K</kbd>
+          </label>
+          <div class="category-filters" id="category-filters" aria-label="按分类筛选事实">
+            <button type="button" data-category="all" aria-pressed="true">全部</button>
+            <button type="button" data-category="景点景观" aria-pressed="false">景点景观</button>
+            <button type="button" data-category="青岛美食" aria-pressed="false">青岛美食</button>
+            <button type="button" data-category="酒店民宿" aria-pressed="false">酒店民宿</button>
+            <button type="button" data-category="啤酒文化" aria-pressed="false">啤酒文化</button>
+            <button type="button" data-category="城市文化" aria-pressed="false">城市文化</button>
+          </div>
+        </div>
+        <div class="library-result-line"><span id="library-result-count">显示 155 条事实</span><span>按原始文档顺序排列</span></div>
+        <div class="fact-grid" id="fact-grid"></div>
+        <div class="empty-state" id="fact-empty" hidden>
+          <span>未找到</span><h2>没有匹配的青岛事实</h2><p>试试更短的关键词，或切换到“全部”分类。</p><button type="button" class="button button-secondary" id="reset-filters">清除筛选</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><span class="mini-mark" aria-hidden="true">岛</span><strong>岛城风物</strong></div>
+    <p>以事实为岸，以创意为帆。</p>
+    <p>资料来源：青岛景观 / 青岛美食 / 酒店与民宿 / 文化</p>
+  </footer>
+
+  <dialog class="fact-dialog" id="fact-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-topline"><span id="dialog-id">Q01</span><button type="button" id="close-dialog" aria-label="关闭事实原文"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></button></div>
+    <p class="dialog-category" id="dialog-category"></p>
+    <h2 id="dialog-title"></h2>
+    <blockquote id="dialog-quote"></blockquote>
+    <div class="dialog-source"><span>原始出处</span><strong id="dialog-source"></strong></div>
+    <p class="dialog-note">原文按文档段落定位，未作外部延伸。</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
